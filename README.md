@@ -2,9 +2,9 @@
 
 A GUI-based Automated Teller Machine (ATM) simulation built with C# 12, .NET 8 Windows Forms, and SQLite. This project implements realistic Kenyan commercial banking rules, cryptographic PIN security, and dual-file data persistence.
 
-Developed as a group laboratory project for **APT1030A: Fundamentals of Programming Languages** at the United States International University-Africa (USIU-Africa).
+Developed as a laboratory project for **APT1030A: Fundamentals of Programming Languages** at the United States International University-Africa (USIU-Africa).
 
-## 🚀 Features
+## Features
 
 * **Dual Data Persistence:** Uses a relational SQLite database (`imara_atm.db`) for accounts/transactions and the `System.IO` namespace to generate timestamped `.txt` receipt slips.
 * **Cryptographic Security:** 4-digit customer PINs are salted and hashed using `SHA256.HashData()`. Plain text PINs are never stored.
@@ -14,14 +14,14 @@ Developed as a group laboratory project for **APT1030A: Fundamentals of Programm
 * **Session Security:** Implements a 3-strike PIN lockout and a 60-second inactivity automated sign-out timer using a global Windows message filter (`IMessageFilter`).
 * **Responsive GUI:** Dynamically scales fonts, grid columns, and padding to prevent UI clipping in both minimized and full-screen modes.
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 * **Language:** C# 12
 * **Framework:** Microsoft .NET 8.0 SDK (`net8.0-windows`)
 * **GUI:** Windows Forms (WinForms)
 * **Database:** SQLite (`Microsoft.Data.Sqlite`)
 
-## ⚙️ Installation and Setup
+## Installation and Setup
 
 1. **Prerequisites:** Ensure you have the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) installed on your Windows machine.
 2. **Clone the Repository:**
@@ -34,7 +34,7 @@ dotnet build
 4. **Run the ATM:**
 dotnet run
 
-## 🔐 Demo Accounts
+## Demo Accounts
 
 Upon the first launch, if the database is empty, the system automatically seeds three Kenyan demo accounts. You can use these to test the ATM:
 
@@ -44,7 +44,7 @@ Upon the first launch, if the database is empty, the system automatically seeds 
 | Otieno Omondi | `011094827101` | `2580` | KES 28,500.00 |
 | Amina Hassan | `011094827102` | `4321` | KES 142,000.00 |
 
-## 📁 Project Structure
+## Project Structure
 
 * `Program.cs`: Application entry point and Windows Forms visual configuration.
 * `MainForm.cs`: The event-driven frontend GUI layer, dynamic scaling logic, and 60-second inactivity timer.
