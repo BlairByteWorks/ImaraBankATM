@@ -25,10 +25,29 @@ Developed as a group laboratory project for **APT1030A: Fundamentals of Programm
 
 1. **Prerequisites:** Ensure you have the [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) installed on your Windows machine.
 2. **Clone the Repository:**
-   ```powershell
-   git clone [https://github.com/yourusername/ImaraBankATM.git](https://github.com/yourusername/ImaraBankATM.git)
-   cd ImaraBankATM
+git clone https://github.com/yourusername/ImaraBankATM.git
+cd ImaraBankATM
 
-**Build the Application:**
-'''powershell
+3. **Build the Application:**
 dotnet build
+
+4. **Run the ATM:**
+dotnet run
+
+## 🔐 Demo Accounts
+
+Upon the first launch, if the database is empty, the system automatically seeds three Kenyan demo accounts. You can use these to test the ATM:
+
+| Account Name | Account Number | 4-Digit PIN | Opening Balance |
+| :--- | :--- | :--- | :--- |
+| Wanjiku Kamau | `011094827100` | `1234` | KES 65,400.00 |
+| Otieno Omondi | `011094827101` | `2580` | KES 28,500.00 |
+| Amina Hassan | `011094827102` | `4321` | KES 142,000.00 |
+
+## 📁 Project Structure
+
+* `Program.cs`: Application entry point and Windows Forms visual configuration.
+* `MainForm.cs`: The event-driven frontend GUI layer, dynamic scaling logic, and 60-second inactivity timer.
+* `DatabaseManager.cs`: The backend data access layer handling SQLite queries, transaction validation, SHA-256 hashing, and `.txt` receipt generation.
+* `Assets/`: Directory containing the custom brand background image.
+* `Receipts/`: Auto-generated folder where the application saves printable text receipts.
