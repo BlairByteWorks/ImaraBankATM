@@ -30,26 +30,5 @@ Developed as a group laboratory project for **APT1030A: Fundamentals of Programm
    cd ImaraBankATM
 
 **Build the Application:**
-*dotnet build*
-
-**Run the ATM:**
-*dotnet run*
-
-**Demo Accounts**
-Upon the first launch, if the database is empty, the system automatically seeds three Kenyan demo accounts. You can use these to test the ATM:
-
-Account Name	Account Number	4-Digit PIN	Opening Balance
-Wanjiku Kamau	011094827100	1234	KES 65,400.00
-Otieno Omondi	011094827101	2580	KES 28,500.00
-Amina Hassan	011094827102	4321	KES 142,000.00
-
-**Project Structure**
-Program.cs: Application entry point and Windows Forms visual configuration.
-
-MainForm.cs: The event-driven frontend GUI layer, dynamic scaling logic, and 60-second inactivity timer.
-
-DatabaseManager.cs: The backend data access layer handling SQLite queries, transaction validation, SHA-256 hashing, and .txt receipt generation.
-
-Assets/: Directory containing the custom brand background image.
-
-Receipts/: Auto-generated folder where the application saves printable text receipts.
+'''powershell
+dotnet build
